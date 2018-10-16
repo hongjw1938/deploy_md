@@ -14,9 +14,7 @@
 
 
 만들어진 파일은 c9의 .gitignore에  /db/*.sqlite3-journal까지 덮어씌워준다. 그 아래로는 덮어씌우면 안된다.
-
 그리고 .gitignore에서 gemfile lock~, config/secret.yml으로 시작하는 두 부분의 주석을 풀어준다.
-
 그다음 다음과 같이 추가해주도록하자
 
     # assets폴더 밑에 있는거 다 날려준다. 왜냐면 precomplie할때마다 삭제되고 또 충돌나기때문에.
@@ -37,9 +35,7 @@
     lib/  muckbo/  muckbo.pem  workspace/
 
 그 후 aws에서 ec2의 탄력적IP를 생성, 그리고 오른쪽클릭후 주소연결을 누른뒤, 인스턴스를 선택하고, 프라이빗은 선택x -> 어소시에이트해준다.
-
 탄력적 IP를 생성하여, 서버를 껐다가 켜도 IPv4 퍼블릭 IP 가 변경되지 않도록 하기 위함.
-
 그 다음 c9 console에서 다음과 같이 실행한다.
 
     namkun:~ $ ssh -i muckbo.pem ec2-user@[IPv4 퍼블릭 IP]
@@ -894,3 +890,4 @@ aws route53에서 했던 것 처럼 A레코드에서 www없는거 하나, 있는
 라고 쳐줍니다.
 
 
+본 내용은 <a href="https://github.com/namekun">김남혁의 github</a>에서 퍼온 것입니다.
